@@ -1,0 +1,19 @@
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+import Login from './src/screens/Login';
+import {colors, sizes} from './src/services';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Login />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: colors.white,
+    height: sizes.screenHeight,
+  },
+});
