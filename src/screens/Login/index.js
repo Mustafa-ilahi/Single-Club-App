@@ -10,6 +10,7 @@ import {
 import {styles} from './style';
 import images from '../../services/utilities/images';
 import { colors } from '../../services';
+import Header from '../../components/Header';
 
 export default function Login() {
   return (
