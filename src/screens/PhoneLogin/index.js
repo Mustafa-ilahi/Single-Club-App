@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Image, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import {Image, SafeAreaView, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import Header from '../../components/Header';
 import CountryPicker from 'react-native-country-picker-modal';
 import {CountryCode, Country} from './src/types';
@@ -8,7 +8,7 @@ import {colors, sizes} from '../../services';
 import images from '../../services/utilities/images';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
-export default function PhoneLogin() {
+export default function PhoneLogin({navigation}) {
   const [countryCode, setCountryCode] = useState('IN');
   const [country, setCountry] = useState('');
   const [withCountryNameButton, setWithCountryNameButton] = useState(true);
@@ -24,7 +24,7 @@ export default function PhoneLogin() {
     setCountry(country.name);
   };
   return (
-    <View>
+    <SafeAreaView>
       <Header title={'Phone Number'} />
       <View style={styles.top}>
         <Text style={styles.label}>Country</Text>
@@ -61,11 +61,11 @@ export default function PhoneLogin() {
           </View>
         )}
       </View>
-      <View style={styles.buttonView}>
-        <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('OTP')}>
+        <View style={styles.buttonView}>
           <Text style={styles.buttonText}>Sign Up/Login with Phone</Text>
-        </TouchableOpacity>
-      </View>
+        </View>
+      </TouchableOpacity>
       <View>
         <View style={styles.textTop}>
           <Text style={styles.blackText}>other login methods</Text>
@@ -88,6 +88,6 @@ export default function PhoneLogin() {
           </View>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }

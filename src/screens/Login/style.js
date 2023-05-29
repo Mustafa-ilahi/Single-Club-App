@@ -46,6 +46,16 @@ export const styles = StyleSheet.create({
     alignSelf: 'center',
     borderRadius: sizes.screenWidth * 0.09,
     left: sizes.screenWidth * 0.05,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowOpacity: 0.38,
+    shadowRadius: 4.0,
+    elevation:4,
+    bottom: 0,
+    zIndex: 0,
   },
   btnText: {
     color: colors.black,
