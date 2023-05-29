@@ -24,7 +24,7 @@ export default function Login({navigation}) {
             <Image source={images.logo} style={styles.logo} />
             <View style={styles.top}>
               <View>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>navigation.navigate("ProfileCreationFB")}>
                   <View style={styles.button}>
                     <Image source={images.fbIcon} style={styles.fbIcon} />
                     <Text style={styles.btnText}>Facebook</Text>

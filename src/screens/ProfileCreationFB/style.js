@@ -79,6 +79,6 @@ export const styles = StyleSheet.create({
     fontSize: fontSize.h6,
   },
   buttonTop: {
-    top: sizes.screenHeight * 0.13,
+    top: sizes.screenHeight * 0.15,
   },
 });

@@ -6,6 +6,7 @@ import Login from '../../screens/Login';
 import PhoneLogin from '../../screens/PhoneLogin';
 import OTP from '../../screens/OTP';
 import ProfileCreationPhone from '../../screens/ProfileCreationPhone';
+import ProfileCreationFB from '../../screens/ProfileCreationFB';
 const Stack = createNativeStackNavigator();
 
 export default function MainNavigator() {
@@ -16,6 +17,8 @@ export default function MainNavigator() {
         <Stack.Screen name="PhoneLogin" component={PhoneLogin} />
         <Stack.Screen name="OTP" component={OTP} />
         <Stack.Screen name="ProfileCreationPhone" component={ProfileCreationPhone} />
+        <Stack.Screen name="ProfileCreationFB" component={ProfileCreationFB} />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
