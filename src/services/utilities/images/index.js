@@ -8,6 +8,7 @@ import twitter from '../../../assets/twitter.png';
 import user from '../../../assets/user.png';
 import instagram from '../../../assets/instagram.png';
 import apple from '../../../assets/apple.png';
+import profile from '../../../assets/profile.png';
 
 const images = {
   bg,
@@ -19,6 +20,7 @@ const images = {
   twitter,
   user,
   instagram,
-  apple
+  apple,
+  profile
 };
 export default images;

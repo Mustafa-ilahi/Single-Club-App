@@ -10,7 +10,7 @@ import {
 
 import {styles} from './style';
 
-export default function OTP() {
+export default function OTP({navigation}) {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(60);
   const [value, setValue] = useState('');
@@ -65,23 +65,24 @@ export default function OTP() {
           />
         </View>
         <View style={styles.buttonTop}>
-
-        <TouchableOpacity onPress={() => {}}>
-          <View style={styles.buttonView}>
-            <Text style={styles.buttonText}>Verification Code</Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('ProfileCreationPhone');
+            }}>
+            <View style={styles.buttonView}>
+              <Text style={styles.buttonText}>Verification Code</Text>
+            </View>
+          </TouchableOpacity>
+          <View style={styles.timerTop}>
+            {minutes === 0 && seconds === 0 ? null : (
+              <Text style={styles.timer}>
+                {' '}
+                00:{seconds < 10 ? `0${seconds}` : seconds}
+              </Text>
+            )}
           </View>
-        </TouchableOpacity>
-        <View style={styles.timerTop}>
-          {minutes === 0 && seconds === 0 ? null : (
-            <Text style={styles.timer}>
-              {' '}
-              00:{seconds < 10 ? `0${seconds}` : seconds}
-            </Text>
-          )}
         </View>
       </View>
-      </View>
-
     </SafeAreaView>
   );
 }

@@ -2,7 +2,7 @@ export const colors = {
   white: '#ffffff',
   black: '#000000',
   error: 'rgba(200, 0, 0, 0.8)',
-  gray: '#32383D',
+  gray: '#777777',
   text: '#292929',
   lightGray: '#F8F9F9',
   disabledBg: '#DDDEDF',
