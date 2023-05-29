@@ -9,10 +9,10 @@ import {
 } from 'react-native';
 import {styles} from './style';
 import images from '../../services/utilities/images';
-import { colors } from '../../services';
+import {colors} from '../../services';
 import Header from '../../components/Header';
 
-export default function Login() {
+export default function Login({navigation}) {
   return (
     <SafeAreaView>
       <View style={{backgroundColor: '#eff6f4'}}>
@@ -43,7 +43,8 @@ export default function Login() {
                 </TouchableOpacity>
               </View>
               <View style={styles.marginTop}>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('PhoneLogin')}>
                   <View style={styles.button}>
                     <Image source={images.phoneIcon} style={styles.phoneIcon} />
                     <Text style={styles.btnText}>Phone</Text>
