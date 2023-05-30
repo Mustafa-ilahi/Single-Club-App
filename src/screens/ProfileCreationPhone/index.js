@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import {Image, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import {Image, SafeAreaView, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import {styles} from './style';
 import images from '../../services/utilities/images';
 import {RadioButton} from 'react-native-paper';
 import {colors} from '../../services';
 import CountryPicker from 'react-native-country-picker-modal';
 
-export default function ProfileCreationPhone() {
+export default function ProfileCreationPhone({navigation}) {
   const [checked, setChecked] = useState('Male');
   const [name, setName] = useState('Akshay Syal');
   const [countryCode, setCountryCode] = useState('IN');
@@ -25,7 +25,7 @@ export default function ProfileCreationPhone() {
     setCountry(country.name);
   };
   return (
-    <View style={styles.paddingTop}>
+    <SafeAreaView style={styles.paddingTop}>
       <Text style={styles.welcomeHead}>Welcome User</Text>
       <Text style={styles.text}>Improve the profile win more attention</Text>
       <View style={styles.top}>
@@ -103,13 +103,13 @@ export default function ProfileCreationPhone() {
       <View style={styles.buttonTop}>
         <TouchableOpacity
           onPress={() => {
-            // navigation.navigate('ProfileCreationPhone');
+            navigation.navigate('TopTrending');
           }}>
           <View style={styles.buttonView}>
             <Text style={styles.buttonText}>Next</Text>
           </View>
         </TouchableOpacity>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
